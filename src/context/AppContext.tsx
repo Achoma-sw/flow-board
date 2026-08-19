@@ -175,7 +175,10 @@ export function AppProvider({ children }: { children: ReactNode }) {
       const target = idx + direction;
       if (target < 0 || target >= siblings.length) return s;
       const reordered = [...siblings];
-      [reordered[idx], reordered[target]] = [reordered[target], reordered[idx]];
+      const a = reordered[idx]!;
+      const b = reordered[target]!;
+      reordered[idx] = b;
+      reordered[target] = a;
       const orderMap = new Map(reordered.map((c, i) => [c.id, i]));
       return {
         ...s,
