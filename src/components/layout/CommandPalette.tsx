@@ -33,7 +33,7 @@ export function CommandPalette() {
   };
 
   return (
-    <CommandDialog open={open} onOpenChange={setOpen} title="Command palette" description="Jump anywhere">
+    <CommandDialog open={open} onOpenChange={setOpen}>
       <CommandInput placeholder="Search projects, tasks and pages…" />
       <CommandList>
         <CommandEmpty>No results found.</CommandEmpty>
