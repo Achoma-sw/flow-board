@@ -100,7 +100,7 @@ export function BoardColumn({
             <DropdownMenuItem onClick={() => moveColumn(column.id, 1)}>
               <ChevronRight className="h-4 w-4" /> Move right
             </DropdownMenuItem>
-            <DropdownMenuItem variant="destructive" onClick={() => deleteColumn(column.id)}>
+            <DropdownMenuItem className="text-destructive focus:text-destructive" onClick={() => deleteColumn(column.id)}>
               <Trash2 className="h-4 w-4" /> Delete column
             </DropdownMenuItem>
           </DropdownMenuContent>

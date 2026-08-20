@@ -93,7 +93,7 @@ export function TaskCard({
             <DropdownMenuItem onClick={() => duplicateTask(task.id)}>
               <Copy className="h-4 w-4" /> Duplicate
             </DropdownMenuItem>
-            <DropdownMenuItem variant="destructive" onClick={() => deleteTask(task.id)}>
+            <DropdownMenuItem className="text-destructive focus:text-destructive" onClick={() => deleteTask(task.id)}>
               <Trash2 className="h-4 w-4" /> Delete
             </DropdownMenuItem>
           </DropdownMenuContent>
