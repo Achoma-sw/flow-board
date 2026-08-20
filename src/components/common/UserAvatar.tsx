@@ -12,9 +12,9 @@ export function UserAvatar({
   size = "md",
   className,
 }: {
-  user?: User | null;
-  size?: keyof typeof sizes;
-  className?: string;
+  user?: User | null | undefined;
+  size?: keyof typeof sizes | undefined;
+  className?: string | undefined;
 }) {
   if (!user) {
     return (
